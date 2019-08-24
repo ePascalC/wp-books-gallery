@@ -1,0 +1,182 @@
+.wbg-main-wrapper .wgb-item {
+    border: 1px solid #DDD;
+    padding: 5px;
+    min-height: 280px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    width: 24.38%;
+}
+
+.wbg-main-wrapper .wgb-item img {
+    border: 0px solid #FF0000;
+    height: 150px;
+    width: auto;
+    margin-bottom: 30px;
+}
+
+.wbg-main-wrapper .wgb-item a {
+    font-size: 12px;
+    display: inline-block;
+    border: 0px solid #000;
+    width: 100%;
+    outline: none;
+}
+
+.wbg-main-wrapper .wgb-item a:active {
+    outline: none;
+    text-decoration: none!important;
+}
+
+.wbg-main-wrapper .wgb-item span {
+    font-size: 11px;
+    display: inline-block;
+    border: 0px solid #000;
+    width: 100%;
+    margin: 0px!important;
+    padding: 0px!important;
+}
+
+
+/* Details Page css */
+
+.wbg-details-wrapper {
+    width: 1000px;
+    margin: 150px auto;
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 100px;
+}
+
+.wbg-details-wrapper .wbg-details-image {
+    min-height: 100px;
+    padding: 5px;
+    margin-right: 20px;
+    border: 0px solid #000;
+    width: 350px;
+}
+
+.wbg-details-wrapper .wbg-details-image img {
+    width: 100%;
+    height: auto;
+    border: none;
+}
+
+.wbg-details-wrapper .wbg-details-description {
+    flex: 1;
+}
+
+.wbg-details-wrapper .wbg-details-description h5.wbg-details-book-title {
+    margin-bottom: 10px;
+    color: #242424;
+    font-size: 24px;
+}
+
+.wbg-details-wrapper .wbg-details-description span {
+    font-size: 14px;
+    display: inline-block;
+    border: 0px solid #000;
+    width: 100%;
+    margin: 0px!important;
+    padding: 0px!important;
+    margin-bottom: 10px!important;
+}
+
+.wbg-details-wrapper .wbg-details-description span b {
+    color: #242424;
+    width: 100px;
+    border: 0px solid #FF0000;
+    display: inline-block;
+}
+
+.wbg-details-wrapper .wbg-details-description-full {
+    border: 0px solid #000;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.wbg-details-wrapper .wbg-details-description-full .wbg-details-description-title {
+    border: 0px solid #009900;
+    padding: 0 8px;
+}
+
+.wbg-details-wrapper .wbg-details-description-full .wbg-details-description-title hr {
+    margin-bottom: 10px;
+}
+
+.wbg-details-wrapper .wbg-details-description-full .wbg-details-description-content {
+    padding: 0 8px;
+}
+
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+
+@media(max-width:500px) {
+    .wbg-main-wrapper .wgb-item {
+        width: 100%;
+    }
+    .wbg-main-wrapper .wgb-item img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 15px;
+    }
+    .wbg-details-wrapper {
+        display: block;
+        width: 100%;
+    }
+    .wbg-details-wrapper .wbg-details-image {
+        width: 100%;
+        display: inline-block;
+        padding: 10px;
+        margin-bottom: 30px;
+    }
+    .wbg-details-wrapper .wbg-details-description {
+        padding: 10px;
+    }
+}
+
+@media only screen and (max-width: 800px) and (min-width: 501px) {
+    .wbg-main-wrapper .wgb-item {
+        width: 48.88%;
+    }
+    .wbg-details-wrapper {
+        display: block;
+        width: 100%;
+    }
+    .wbg-details-wrapper .wbg-details-image {
+        width: 100%;
+        display: inline-block;
+        padding: 10px;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    .wbg-details-wrapper .wbg-details-image img {
+        width: 300px;
+        margin: 0 auto;
+    }
+    .wbg-details-wrapper .wbg-details-description {
+        padding: 10px;
+    }
+}
+
+@media only screen and (max-width: 1200px) and (min-width: 801px) {
+    .wbg-main-wrapper .wgb-item {
+        width: 31.90%;
+        min-height: 297px;
+    }
+    .wbg-details-wrapper {
+        display: flex;
+        width: 100%;
+    }
+    .wbg-details-wrapper .wbg-details-image {
+        width: 300px;
+        display: inline-block;
+        padding: 10px;
+        margin-bottom: 30px;
+        text-align: center;
+        margin-right: 0px;
+    }
+    .wbg-details-wrapper .wbg-details-description {
+        flex: 1;
+        padding: 10px;
+    }
+}
