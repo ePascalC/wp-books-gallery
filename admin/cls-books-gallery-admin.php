@@ -134,6 +134,7 @@ class WBG_Admin
 		$wbg_language 		= get_post_meta( $post->ID, 'wbg_language', true );
 		$wbg_dimension 		= get_post_meta( $post->ID, 'wbg_dimension', true );
 		$wbg_filesize 		= get_post_meta( $post->ID, 'wbg_filesize', true );
+		$wbg_status 		= get_post_meta( $post->ID, 'wbg_status', true );
 		?>
 		<table class="form-table">
 			<tr class="wbg_author">
@@ -216,6 +217,18 @@ class WBG_Admin
 					<input type="text" name="wbg_filesize" value="<?php echo esc_attr( $wbg_filesize ); ?>" class="regular-text">
 				</td>
           	</tr>
+			<tr class="wbg_status">
+               	<th scope="row">
+                    <label for="wbg_status"><?php esc_html_e('Status:', WBG_TXT_DOMAIN); ?></label>
+               	</th>
+               	<td>
+					<select name="wbg_status" class="regular-text">
+						<option value="">--Please Select--</option>
+						<option value="active" <?php if('active'==esc_attr( $wbg_status) ) echo 'selected'; ?>>Active</option>
+						<option value="inactive" <?php if('inactive'==esc_attr( $wbg_status) ) echo 'selected'; ?>>Inactive</option>
+					</select>
+               	</td>
+          	</tr>
 		</table>
 		<?php
 	}
@@ -244,6 +257,7 @@ class WBG_Admin
 		$events_meta['wbg_language'] 		= (!empty($_POST['wbg_language']) && (sanitize_text_field($_POST['wbg_language'])!='')) ? sanitize_text_field($_POST['wbg_language']) : '';
 		$events_meta['wbg_dimension'] 		= (!empty($_POST['wbg_dimension']) && (sanitize_text_field($_POST['wbg_dimension'])!='')) ? sanitize_text_field($_POST['wbg_dimension']) : '';
 		$events_meta['wbg_filesize'] 		= (!empty($_POST['wbg_filesize']) && (sanitize_text_field($_POST['wbg_filesize'])!='')) ? sanitize_text_field($_POST['wbg_filesize']) : '';
+		$events_meta['wbg_status'] 			= (!empty($_POST['wbg_status']) && (sanitize_text_field($_POST['wbg_status'])!='')) ? sanitize_text_field($_POST['wbg_status']) : '';
 
 		foreach ( $events_meta as $key => $value ) :
 			if ( 'revision' === $post->post_type ) {

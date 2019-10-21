@@ -1,9 +1,35 @@
 <?php
+$category =  isset($attr['category']) ? $attr['category'] : '';
+$display = isset($attr['display']) ? $attr['display'] : '';
+$pagination = isset($attr['pagination']) ? $attr['pagination'] : false;
+$wbgPaged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 $wbgBooksArr = array(
-  'post_type' => 'books',
-  'post_status' => 'publish',
-  'order' => 'DESC',
-);
+                      'post_type' => 'books',
+                      'post_status' => 'publish',
+                      'order' => 'DESC',
+                      'meta_query' => array(
+                                              array(
+                                                  'key' => 'wbg_status',
+                                                  'value' => 'active',
+                                                  'compare' => 'LIKE'
+                                              )
+                                              ),
+                    );
+if($display!=''){
+  $wbgBooksArr['posts_per_page'] = $display;
+}
+if($category!=''){
+  $wbgBooksArr['tax_query'] = array(
+                                      array(
+                                              'taxonomy' => 'book_category',
+                                              'field' => 'name',
+                                              'terms' => $category
+                                          )
+                                      );
+}
+if($pagination=='true'){
+  $wbgBooksArr['paged'] = $wbgPaged;
+}
 wp_reset_query();
 $wbgBooks = new WP_Query($wbgBooksArr);
 ?>
@@ -54,3 +80,25 @@ $wbgBooks = new WP_Query($wbgBooksArr);
   </div>
   <?php endwhile; ?>
 </div>
+<?php if($pagination=='true'){ ?>
+<div style="width:100%; text-align:center;">
+      <?php
+      $wbgTotalPages = $wbgBooks->max_num_pages;
+
+      if ($wbgTotalPages > 1){
+  
+          $wbgCurrentPage = max(1, get_query_var('paged'));
+  
+          echo paginate_links(array(
+              'base'      => get_pagenum_link(1) . '%_%',
+              'format'    => '/page/%#%',
+              'current'   => $wbgCurrentPage,
+              'total'     => $wbgTotalPages,
+              'prev_text' => __('« prev'),
+              'next_text' => __('next »'),
+          ));
+      }
+      wp_reset_postdata();
+      ?>
+</div>
+<?php } ?>

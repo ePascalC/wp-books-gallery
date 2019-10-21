@@ -3,8 +3,8 @@ Contributors: mhmrajib, ali_siddique
 Donate link: https://www.paypal.me/mhmrajib/2
 Tags: book, bookstore, store, bookcase, booklet
 Requires at least: 4.6
-Tested up to: 5.2.2
-Stable tag: 1.2
+Tested up to: 5.2.4
+Stable tag: 1.3
 Requires PHP: 5.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -19,7 +19,7 @@ Display anywhere in your Page or Post by using shortcode: [wp_books_gallery].
 
 WP Books Gallery is simple, effective and powerful plugin to showcase your desired Books.
 
-**Plugin Features:**
+**🌟 Plugin Features:**
 
 * Easy to install
 * Fully integrated in WordPress
@@ -31,19 +31,37 @@ WP Books Gallery is simple, effective and powerful plugin to showcase your desir
 * Fully Responsive Plugin
 * Display anywhere in your Page or Post by using shortcode: [wp_books_gallery]
 * Options for display Book Author, Published On, Publisher, ISBN, Total Pages, Country, Language, Book Dimensions, File Size and Description.
+* Option to Active/Inactive books
+* Option to control the number of books to be shown
+* Option to display books by category
+* Option to display pagination
+
+➡️Useage of Shortcode:⬅️
+<strong> Show all Books </strong>
+
+<pre> [wp_books_gallery] </pre>
+
+<strong> Showing 5 Books with Pagination </strong>
+
+<pre> [wp_books_gallery display="5" pagination="true"]</pre>
+
+<strong> Showing Books from a category </strong>
+
+<pre> [wp_books_gallery category="Noble"</pre>
 
 
 **Demo:**
 [See the Demo](http://plugin.hossnimubarak.com/books/)
 
 
-**Feedback/Rating:**
+**📋 Feedback/Rating:**
 If you find this plugin helpful, feel free to give us your valuable review and share this plugin with friends and others. This will help us to improve this plugin.
 
 
 
-**Other Plugins from [HM Plugins](http://www.hossnimubarak.com)**
+**🔥 Other Plugins from [HM Plugins](http://www.hossnimubarak.com)**
 
+* [HM Product Catalog](https://wordpress.org/plugins/hm-product-catalog/) HM Product Catalog
 * [HM – Cool Author Box](https://wordpress.org/plugins/hm-cool-author-box-widget/) Author Box plugin
 * [Worldwide Breaking News Headlines](https://wordpress.org/plugins/worldwide-breaking-news-headlines/) Breaking News, Headlines plugin
 * [WP Scroll To Post](https://wordpress.org/plugins/wp-scroll-to-post/) Display random post(Single) at the bottom right corner
@@ -93,6 +111,10 @@ Please go to WGB Books menu, and add your desired books.
 7. WP Books Gallery Details Page View
 
 == Changelog ==
+
+= 1.3 =
+* Shortcode included: Display Option, Pagination Option, Category Option
+* Active/Inactive option added
 
 = 1.2 =
 * Book detail page layout modified

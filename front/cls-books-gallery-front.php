@@ -37,7 +37,7 @@ class WBG_Front
 		add_shortcode( 'wp_books_gallery', array( $this, 'wbg_load_shortcode_view' ) );
 	}
 	
-	function wbg_load_shortcode_view(){
+	function wbg_load_shortcode_view($attr){
 		$output = '';
 		ob_start();
 		include WBG_PATH . 'front/view/' . $this->wbg_assets_prefix . 'front-view.php';
