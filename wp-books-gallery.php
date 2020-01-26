@@ -3,7 +3,7 @@
  * Plugin Name:	WP Books Gallery
  * Plugin URI:	http://wordpress.org/plugins/wp-books-gallery/
  * Description:	A simple plugin to display books in your Post/Page area. Use shortcode: [wp_books_gallery]
- * Version:		1.3
+ * Version:		1.4
  * Author:		Hossni Mubarak
  * Author URI:	http://www.hossnimubarak.com
  * License:		GPL-2.0+
