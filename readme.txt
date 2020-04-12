@@ -14,10 +14,10 @@ A simple plugin to display books in your Post/Page area. Use shortcode: [wp_book
 == Description ==
 
 [WP Books Gallery](http://www.hossnimubarak.com) is a Responsive Book catalog plugin to display Books in your Post/Page area. 
-In Book deatils page it display Book Cover, Author, Published On, Publisher, ISBN, Total Pages, Country, Language, Book Dimensions, File Size, Description etc.
-Display anywhere in your Page or Post by using shortcode: [wp_books_gallery].
+In a Book details page it displays Book Cover, Author, Published On, Publisher, ISBN, Total Pages, Country, Language, Book Dimensions, File Size, Description etc.
+Display anywhere in your Page or Post by using a shortcode: [wp_books_gallery].
 
-WP Books Gallery is simple, effective and powerful plugin to showcase your desired Books.
+WP Books Gallery is a simple, effective and powerful plugin to showcase your desired Books.
 
 **🌟 Plugin Features:**
 
@@ -36,7 +36,7 @@ WP Books Gallery is simple, effective and powerful plugin to showcase your desir
 * Option to display books by category
 * Option to display pagination
 
-➡️Useage of Shortcode:⬅️
+➡️Usage of Shortcode:⬅️
 <strong> Show all Books </strong>
 
 <pre> [wp_books_gallery] </pre>
