@@ -125,7 +125,6 @@ class WBG_Admin
 		// Nonce field to validate form request came from current site
 		wp_nonce_field( basename( __FILE__ ), 'event_fields' );
 		$wbg_author 		= get_post_meta( $post->ID, 'wbg_author', true );
-		$wbg_download_link 	= get_post_meta( $post->ID, 'wbg_download_link', true );
 		$wbg_publisher 		= get_post_meta( $post->ID, 'wbg_publisher', true );
 		$wbg_published_on 	= get_post_meta( $post->ID, 'wbg_published_on', true );
 		$wbg_isbn 			= get_post_meta( $post->ID, 'wbg_isbn', true );
@@ -133,6 +132,7 @@ class WBG_Admin
 		$wbg_country 		= get_post_meta( $post->ID, 'wbg_country', true );
 		$wbg_language 		= get_post_meta( $post->ID, 'wbg_language', true );
 		$wbg_dimension 		= get_post_meta( $post->ID, 'wbg_dimension', true );
+		$wbg_download_link 	= get_post_meta( $post->ID, 'wbg_download_link', true );
 		$wbg_filesize 		= get_post_meta( $post->ID, 'wbg_filesize', true );
 		$wbg_status 		= get_post_meta( $post->ID, 'wbg_status', true );
 		?>
@@ -145,14 +145,6 @@ class WBG_Admin
 			   		<input type="text" name="wbg_author" value="<?php echo esc_attr( $wbg_author ); ?>" class="regular-text">
                	</td>
           	</tr>  
-			<tr class="wbg_download_link">
-               	<th scope="row">
-                    <label for="wbg_download_link"><?php esc_html_e('Download Link:', WBG_TXT_DOMAIN); ?></label>
-               	</th>
-               	<td>
-			   		<input type="text" name="wbg_download_link" value="<?php echo esc_attr( $wbg_download_link ); ?>" class="widefat">
-               	</td>
-			</tr>
 			<tr class="wbg_publisher">
                	<th scope="row">
                     <label for="wbg_publisher"><?php esc_html_e('Publisher:', WBG_TXT_DOMAIN); ?></label>
@@ -209,6 +201,14 @@ class WBG_Admin
 					<input type="text" name="wbg_dimension" value="<?php echo esc_attr( $wbg_dimension ); ?>" class="medium-text">
 				</td>
 			</tr>
+			<tr class="wbg_download_link">
+               	<th scope="row">
+                    <label for="wbg_download_link"><?php esc_html_e('Download Link:', WBG_TXT_DOMAIN); ?></label>
+               	</th>
+               	<td>
+			   		<input type="text" name="wbg_download_link" value="<?php echo esc_attr( $wbg_download_link ); ?>" class="widefat">
+               	</td>
+			</tr>
 			<tr class="wbg_filesize">
 				<th scope="row">
 					<label for="wbg_filesize"><?php esc_html_e('File Size:', WBG_TXT_DOMAIN); ?></label>
@@ -247,7 +247,6 @@ class WBG_Admin
 		}
 
 		$events_meta['wbg_author'] 			= (!empty($_POST['wbg_author']) && (sanitize_text_field($_POST['wbg_author'])!='')) ? sanitize_text_field($_POST['wbg_author']) : '';
-		$events_meta['wbg_download_link'] 	= (!empty($_POST['wbg_download_link']) && (sanitize_text_field($_POST['wbg_download_link'])!='')) ? sanitize_text_field($_POST['wbg_download_link']) : '';
 		$events_meta['wbg_publisher'] 		= (!empty($_POST['wbg_publisher']) && (sanitize_text_field($_POST['wbg_publisher'])!='')) ? sanitize_text_field($_POST['wbg_publisher']) : '';
 		$events_meta['wbg_published_on'] 	= (!empty($_POST['wbg_published_on']) && (sanitize_text_field($_POST['wbg_published_on'])!='')) ? sanitize_text_field($_POST['wbg_published_on']) : '';
 		$events_meta['wbg_isbn'] 			= (!empty($_POST['wbg_isbn']) && (sanitize_text_field($_POST['wbg_isbn'])!='')) ? sanitize_text_field($_POST['wbg_isbn']) : '';
@@ -255,6 +254,7 @@ class WBG_Admin
 		$events_meta['wbg_country'] 		= (!empty($_POST['wbg_country']) && (sanitize_text_field($_POST['wbg_country'])!='')) ? sanitize_text_field($_POST['wbg_country']) : '';
 		$events_meta['wbg_language'] 		= (!empty($_POST['wbg_language']) && (sanitize_text_field($_POST['wbg_language'])!='')) ? sanitize_text_field($_POST['wbg_language']) : '';
 		$events_meta['wbg_dimension'] 		= (!empty($_POST['wbg_dimension']) && (sanitize_text_field($_POST['wbg_dimension'])!='')) ? sanitize_text_field($_POST['wbg_dimension']) : '';
+		$events_meta['wbg_download_link'] 	= (!empty($_POST['wbg_download_link']) && (sanitize_text_field($_POST['wbg_download_link'])!='')) ? sanitize_text_field($_POST['wbg_download_link']) : '';
 		$events_meta['wbg_filesize'] 		= (!empty($_POST['wbg_filesize']) && (sanitize_text_field($_POST['wbg_filesize'])!='')) ? sanitize_text_field($_POST['wbg_filesize']) : '';
 		$events_meta['wbg_status'] 			= (!empty($_POST['wbg_status']) && (sanitize_text_field($_POST['wbg_status'])!='')) ? sanitize_text_field($_POST['wbg_status']) : '';
 
